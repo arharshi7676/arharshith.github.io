@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            background-image: linear-gradient(to bottom right, #43c6ac, #f8ffae);
+            background-attachment: fixed;
+            font-family: cursive, 'Arial', sans-serif;
+            flex: 1;
+        }
+
+        /* Profile photo */
+        .my_photo {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: block;
+            margin: 20px auto;
+            background: transparent;
+            z-index: 1;
+            box-shadow: 0 0 30px rgba(230, 9, 9, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        .my_photo::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: linear-gradient(to bottom right, #011647, #f8ae3c);
+            box-shadow: 0 0 60px rgba(79, 247, 210, 0.8);
+            z-index: -1;
+        }
+
+        .my_photo:hover {
+            box-shadow: 0 0 50px rgb(92, 219, 7);
+            transform: scale(1.1);
+        }
+
+        /* Name */
+        .name {
+            text-align: center;
+            font-size: 18px;
+            color: #044373;
+            margin-top: 10px;
+            font-family: 'Montserrat', cursive, 'Arial', sans-serif;
+        }
+
+        /* Paragraphs */
+        p {
+            text-align: center;
+            margin: 20px auto;
+            color: #044373;
+            line-height: 1.5;
+        }
+
+        /* IEEE link */
+        .IEEE {
+            font-size: 12px;
+            font-family: cursive;
+            text-decoration: none;
+            color: rgb(20, 5, 237);
+            transition: all 0.3s ease;
+        }
+        .IEEE:hover {
+            transform: scale(1.1);
+            text-decoration: underline;
+            color: #000000;
+        }
+
+        /* Social links */
+        .social-links {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .social-links h2 {
+            color: #044373;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 13px rgba(12, 8, 239, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(41, 38, 6, 0.9);
+            padding: 15px 0;
+            text-align: center;
+            margin-top: auto;
+            width: 100%;
+        }
+
+        footer p {
+            color: white;
+            margin: 0;
+            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .my_photo {
+                width: 80px;
+                height: 80px;
+                box-shadow: 0 0 20px rgba(67, 198, 172, 0.6);
+            }
+
+            .my_photo::before {
+                width: 180px;
+                height: 180px;
+            }
+
+            .name {
+                font-size: 16px;
+            }
+
+            p {
+                margin: 15px auto;
+                font-size: 14px;
+            }
+
+            .IEEE {
+                font-size: 11px;
+            }
+
+            .social-icons {
+                gap: 15px;
+            }
+
+            .social-icons img {
+                width: 25px;
+                height: 25px;
+            }
+
+            footer p {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="intro">
+            <img src="hari.jpg" alt="My Photo" class="my_photo">
+            <h1 class="name">Harshith A R</h1>
+            
+            <p>
+                Myself <strong>HARSHITH A R</strong>, a second-year Electronics and Communication Engineering student 
+                at <strong>SJCE, JSS-STU, Mysore</strong>. I'm passionate about electronics and aim to contribute innovative 
+                solutions for real-world problems. My interests include <strong>VLSI and Embedded Systems</strong>.
+            </p>
+
+            <p>
+                My recent achievement is being selected as the Joint Secretary of the Executive Committee, 
+                <strong><i><a target="_blank" class="IEEE" href="https://ieeesjce.org/">IEEE-SJCE, JSS-STU, Mysore</a></i></strong>.
+            </p>
+        </section>
+
+        <section class="social-links">
+            <h2>Let's Connect</h2>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/harshi76" target="_blank" aria-label="LinkedIn">
+                    <img src="linkedin.jpeg" alt="LinkedIn">
+                </a>
+                <a href="mailto:arharshi9535@gmail.com" aria-label="Email">
+                    <img src="email.jpeg" alt="Email">
+                </a>
+                <a href="https://github.com/arharshi7676" target="_blank" aria-label="GitHub">
+                    <img src="git.jpeg" alt="GitHub">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Harshith A R. All rights reserved.</p>
+    </footer>
+</body>
+</html>
